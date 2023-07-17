@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --btn-color: #14b8b7;
+  --logo-color: #10b8b9;
+  --nav-backgroud: #ffffffe8;
+  --box-shadow: 0px 3px 7px 1px rgba(207, 207, 207, 0.979);
+  --title-font: "Playfair Display", serif;
+  --primary-font: "Open Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: min(95%, 1600px);
+  margin-inline: auto;
+}
+.mt {
+  margin-top: 20px;
+}
+/* ========================= Common part End ========================= */
+
+/* ========================= Nav part Start ========================= */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--nav-backgroud);
+  height: 80px;
+  width: 100%;
+  padding: 0 100px;
+  box-shadow: var(--box-shadow);
+  z-index: 1;
+}
+.logo {
+  color: var(--logo-color);
+  font-size: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: var(--primary-font);
+}
+.logo svg {
+  margin-right: 10px;
+}
+nav ul {
+  float: right;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  color: var(--light);
+  font-size: 14px;
+  font-weight: 600;
+  padding-left: 30px;
+  text-transform: uppercase;
+  font-family: var(--primary-font);
+}
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+.custom-btn {
+  background-color: var(--btn-color);
+  border: none;
+  border-radius: 5px;
+  padding: 13px 27px;
+  cursor: pointer;
+  font-family: var(--primary-font);
+  font-size: 14px;
+}
+
+/* ========================= Nav part End ========================= */
+
+/* ========================= Banner part Start ========================= */
+.banner {
+  margin-top: 40px;
+}
+.banner-main {
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+
+.banner-main .banner-right {
+  margin-right: 50px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.banner-main .banner-right h1 {
+  position: absolute;
+  content: "";
+  right: 85%;
+  top: 35%;
+  width: 300px;
+  border: 1px solid #14b8b875;
+  padding: 10px 20px;
+  font-family: var(--title-font);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.banner-main .banner-left {
+  margin-top: 30px;
+  margin-left: 10px;
+  /* margin: auto 0; */
+}
+
+.banner-main .banner-left h1 {
+  font-size: 35px;
+  font-family: var(--primary-font);
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: #038181;
+}
+.banner-main .banner-left .title-p {
+  width: 700px;
+  font-family: var(--primary-font);
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.733);
+  margin-left: 30px;
+  padding-top: 5px;
+  margin-bottom: 50px;
+}
+/* .first {
+  margin-right: 50px;
+} */
+.banner-main .banner-left .first {
+  margin-bottom: 25px;
+}
+.banner-main .banner-left .first svg {
+  color: var(--btn-color);
+  margin-right: 12px;
+}
+.banner-main .banner-left .first h4 {
+  font-family: var(--primary-font);
+  font-weight: 700;
+  font-size: 18px;
+}
+.banner-main .banner-left .first p {
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.733);
+  margin-left: 30px;
+  padding-top: 5px;
+}
+
+.health {
+  color: #038181;
+}
+/* ========================= Banner part end ========================= */
+
+/* ========================= counter part Start ========================= */
+
+.show-counter {
+  margin-top: 70px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+}
+.single-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 200px;
+  height: 170px;
+  margin: 0 20px;
+  background-color: var(--nav-backgroud);
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+  border-top: 5px solid var(--btn-color);
+  /* border-bottom: 2px solid var(--btn-color); */
+}
+
+.single-counter span {
+  font-size: 30px;
+  color: var(--btn-color);
+  font-weight: 700;
+}
+
+.single-counter p {
+  font-family: var(--title-font);
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 10px;
+}
+/* ========================= counter part end ========================= */
+
+/* ================= Scrollbar Styling ================= */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 20px;
+  background: var(--btn-color);
+}
+
+.myDashLogin {
+  display: none;
+}
